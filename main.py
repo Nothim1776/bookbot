@@ -3,9 +3,18 @@ def get_book_text(path):
 		file_contents = f.read()
 		return file_contents
 
-def main():
+def pull_book():
 	path = "books/frankenstein.txt"
 	text = get_book_text(path)
-	print(text)
+	return(text)
 
-main()
+def word_count():
+	text = pull_book()
+	words = text.split()
+	num_words = 0
+	for word in words:
+		num_words += 1
+	print(f"{num_words} words found in the document")
+
+
+word_count()
