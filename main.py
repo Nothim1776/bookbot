@@ -1,4 +1,4 @@
-from stats import word_count
+from stats import letter_count
 
 def get_book_text(path):
 	with open(path) as f:
@@ -11,5 +11,5 @@ def pull_book():
 	return(text)
 
 text = pull_book()
-num_words = word_count(text)
-print(f"{num_words} words found in the document")
+letter_dict = letter_count(text)
+print(letter_dict)
